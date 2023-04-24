@@ -7,21 +7,26 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd {
     margin: 0px;
     padding: 0px;
     font-size: 14px;
     font-weight: normal;
 }
+
 img {
     border-style: none;
 }
+
 li {
     list-style: none;
 }
+
 a {
     text-decoration: none
 }
+
 html, body {
     background: #fff;
     height: 100%;
@@ -52,9 +57,11 @@ textarea {
     min-height: 100%;
 
 }
-.content-inside{
-   padding-bottom: 60px;
+
+.content-inside {
+    padding-bottom: 60px;
 }
+
 .footer {
     height: 60px;
     text-align: center;
@@ -63,6 +70,7 @@ textarea {
     margin-top: -100px; 
     clear:both; */
 }
+
 /* logo start  */
 .logo-box {
     display: flex;
@@ -70,18 +78,21 @@ textarea {
     margin-left: 250px;
     align-items: center;
 }
+
 .logo-left {
     position: relative;
     width: 125px;
     height: 121px;
     cursor: pointer;
 }
+
 .logo-right {
     padding-left: 36px;
     font-size: 36px;
     color: rgba(0, 39, 102, 1);
     font-family: SourceHanSansSC-regular;
 }
+
 /* logo end  */
 
 
@@ -90,10 +101,12 @@ textarea {
     margin-top: 14px;
     margin-bottom: 40px;
 }
+
 .search-section {
     position: relative;
     display: flex;
 }
+
 .search-left {
     display: flex;
     width: 877px;
@@ -101,6 +114,7 @@ textarea {
     line-height: 20px;
     border: 1px solid rgba(217, 217, 217, 0.96);
 }
+
 .search-logo {
     width: 60px;
     align-items: center;
@@ -117,6 +131,7 @@ textarea {
     city: 0.2;*/
     /*cursor: pointer;*/
 }
+
 .search-logo:hover {
     filter: grayscale(0%);
     -webkit-filter: grayscale(0%);
@@ -127,6 +142,7 @@ textarea {
     -khtml-opacity: 1;
     opacity: 1;
 }
+
 .search-methods {
     display: none;
     position: absolute;
@@ -136,6 +152,7 @@ textarea {
     border: 1px solid rgba(217, 217, 217, 0.96);
     background-color: #fff;
 }
+
 .search-methods li {
     padding-left: 39px;
     background: url("./svg/fail.svg") 10px no-repeat;
@@ -169,21 +186,27 @@ textarea {
 .search-logo.baidu, li.baidu {
     background-image: url("./svg/scbaidu.svg");
 }
+
 .search-logo.sogou, li.sogou {
     background-image: url("./svg/scsougou.svg");
 }
+
 .search-logo.soso, li.soso {
     background-image: url("./svg/scsoso.svg");
 }
+
 .search-logo.gitee, li.gitee {
     background-image: url("./svg/scgitee.svg");
 }
+
 .search-logo.github, li.github {
     background-image: url("./svg/scgithub.svg");
 }
+
 .search-logo.wikipedia, li.wikipedia {
     background-image: url("./svg/scwikipedia.svg");
 }
+
 .search-logo.wechat, li.wechat {
     background-image: url("./svg/scwechat.svg");
 }
@@ -205,14 +228,17 @@ textarea {
     border: 1px solid rgba(187, 187, 187, 1);
     background-color: #fff;
 }
+
 .result-item {
     height: 34px;
     line-height: 34px;
     padding-left: 15px;
 }
+
 .result-item.active {
     background: #F0F0F0;
 }
+
 .result-item:hover {
     background-color: #eee;
     cursor: pointer;
@@ -222,6 +248,7 @@ textarea {
     position: relative;
     flex: 1;
 }
+
 .input-wrap .search-input {
     height: 52px;
     width: 100%;
@@ -230,6 +257,7 @@ textarea {
     font-size: 16px;
     padding-left: 15px;
 }
+
 /* .input-wrap .search-input:focus{
 	border-style:solid;
 	border-color: #FDA31E 96%;
@@ -270,7 +298,7 @@ textarea {
     font-family: Roboto;
     border: 1px solid #1890ff;
     cursor: pointer;
-    background: linear-gradient(90deg,#1890FF,#455bfb);
+    background: linear-gradient(90deg, #1890FF, #455bfb);
 }
 
 /* 搜索框 end */
@@ -278,6 +306,7 @@ textarea {
 .nav-content {
     overflow: hidden;
 }
+
 /*  导航内容 end  */
 
 
@@ -291,20 +320,24 @@ textarea {
     margin-bottom: 30px;
     padding-right: 16px;
 }
+
 .jj-list:nth-of-type(3n) {
     padding-right: 0;
 }
+
 .jj-list-tit {
     font-size: 16px;
     line-height: 25px;
     color: rgba(49, 70, 89, 1);
     font-weight: bold;
 }
+
 .jj-list-con {
     overflow: hidden;
     margin: 0 auto;
 
 }
+
 .jj-list-con li {
     box-sizing: border-box; /*以IE盒子模型的width为标准*/
     padding: 1px 1px; /*设置div的内边距*/
@@ -316,6 +349,7 @@ textarea {
 .jj-list-con li:hover {
     /*animation: swing 2s linear 0s 1 forwards*/
 }
+
 @keyframes swing {
     0%, 100% {
         transform: perspective(200px) rotateX(0);
@@ -349,13 +383,14 @@ textarea {
 .jj-list-link {
     display: block;
     background: rgba(230, 247, 255, 0.96);
-    color:rgba(49, 70, 89, 1);
+    color: rgba(49, 70, 89, 1);
     font-size: 12px;
     text-align: center;
     line-height: 45px;
     transition: all 0.5s;
     border-radius: 2px;
 }
+
 .jj-list-link:hover {
     background: #1890FF;
     font-size: 15px;
