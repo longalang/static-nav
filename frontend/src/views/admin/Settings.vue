@@ -216,7 +216,7 @@ const formRef = ref(null)
 const faviconUploadRef = ref(null)
 const logoUploadRef = ref(null)
 const faviconPreview = ref('/favicon.ico')
-const logoPreview = ref('/logo.gif')
+const logoPreview = ref('/logo.png')
 const backupFiles = ref([])
 
 const form = ref({

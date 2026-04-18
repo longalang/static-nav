@@ -4,7 +4,7 @@
       <div class="content-inside">
         <!-- Logo -->
         <div class="logo-box">
-          <img src="/logo.gif" alt="logo" height="130px">
+          <img src="/logo.png" alt="logo" height="130px">
         </div>
         
         <!-- 搜索框 -->

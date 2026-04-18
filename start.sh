@@ -43,14 +43,15 @@ cd backend || exit 1
 
 if [ ! -d "nav" ]; then
     echo -e "  ${BLUE}创建虚拟环境...${NC}"
-    python3 -m venv nav
+    $PYTHON_CMD -m venv nav
 fi
 
 echo -e "  ${BLUE}激活虚拟环境...${NC}"
 source nav/bin/activate
 
 echo -e "  ${BLUE}安装/更新依赖...${NC}"
-pip install -r requirements.txt
+# 使用虚拟环境中的 pip，避免系统级限制
+nav/bin/pip install -r requirements.txt
 if [ $? -ne 0 ]; then
     echo -e "${RED}[错误] 后端依赖安装失败${NC}"
     exit 1
@@ -79,7 +80,7 @@ echo ""
 echo -e "${YELLOW}[3/4] 检查数据库...${NC}"
 if [ ! -f "backend/data/nav.db" ]; then
     echo -e "  ${BLUE}数据库不存在，正在初始化...${NC}"
-    python3 数据库初始化.py
+    $PYTHON_CMD 数据库初始化.py
     if [ $? -ne 0 ]; then
         echo -e "${YELLOW}[警告] 数据库初始化可能有问题，但将继续启动${NC}"
     fi
@@ -90,12 +91,6 @@ echo -e "  ${GREEN}✅ 数据库检查完成${NC}"
 
 echo ""
 echo -e "${YELLOW}[4/4] 启动服务...${NC}"
-echo ""
-echo -e "${BLUE}========================================${NC}"
-echo -e "${BLUE}  后端服务: http://localhost:8000${NC}"
-echo -e "${BLUE}  前端服务: http://localhost:5173${NC}"
-echo -e "${BLUE}  API文档:  http://localhost:8000/docs${NC}"
-echo -e "${BLUE}========================================${NC}"
 echo ""
 echo -e "${YELLOW}按 Ctrl+C 停止所有服务${NC}"
 echo ""
@@ -112,11 +107,19 @@ cleanup() {
 
 # 注册清理函数
 trap cleanup INT TERM
+echo ""
+echo -e "${BLUE}========================================${NC}"
+echo -e "${BLUE}  后端服务: http://localhost:8000${NC}"
+echo -e "${BLUE}  前端服务: http://localhost:5173${NC}"
+echo -e "${BLUE}  API文档:  http://localhost:8000/docs${NC}"
+echo -e "${BLUE}========================================${NC}"
+echo ""
 
 # 启动后端
 cd backend
+# 使用虚拟环境中的 Python 直接运行，避免 source 命令兼容性问题
 source nav/bin/activate
-python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload &
+nav/bin/python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload &
 BACKEND_PID=$!
 cd ..
 
