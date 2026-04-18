@@ -1,0 +1,507 @@
+/* ================ reset 样式 start  ================ */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-weight: normal;
+}
+img {
+    border-style: none;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none
+}
+html, body {
+    background: #fff;
+    height: 100%;
+
+}
+
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
+    outline: 0;
+}
+
+textarea {
+    -webkit-appearance: none;
+}
+
+/* ================ reset 样式 end  ================ */
+
+
+.inner-center {
+    width: 1000px;
+    margin: 0 auto;
+
+}
+
+.main {
+    padding-top: 2%;
+    min-height: 100%;
+
+}
+.content-inside{
+   padding-bottom: 60px;
+}
+.footer {
+    height: 60px;
+    text-align: center;
+    margin-top: -60px;
+    /* position: relative;
+    margin-top: -100px; 
+    clear:both; */
+}
+/* logo start  */
+.logo-box {
+    display: flex;
+    overflow: hidden;
+    margin-left: 250px;
+    align-items: center;
+}
+.logo-left {
+    position: relative;
+    width: 125px;
+    height: 121px;
+    cursor: pointer;
+}
+.logo-right {
+    padding-left: 36px;
+    font-size: 36px;
+    color: rgba(0, 39, 102, 1);
+    font-family: SourceHanSansSC-regular;
+}
+/* logo end  */
+
+
+/* 搜索框 start */
+.search-section {
+    margin-top: 14px;
+    margin-bottom: 40px;
+}
+.search-section {
+    position: relative;
+    display: flex;
+}
+.search-left {
+    display: flex;
+    width: 877px;
+    height: 54px;
+    line-height: 20px;
+    border: 1px solid rgba(217, 217, 217, 0.96);
+}
+.search-logo {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search-logo svg {
+    width: 23px;
+    height: 23px;
+}
+.search-logo:hover {
+    background-color: #f0f2f5;
+}
+.search-methods {
+    position: absolute;
+    left: 0;
+    top: 54px;
+    width: 117px; /* ✅ 从78px增加到117px（增加50%） */
+    border: 1px solid rgba(217, 217, 217, 0.96);
+    background-color: #fff;
+    z-index: 1000;
+}
+.search-methods li {
+    padding: 0 1ch;
+    overflow: hidden;
+    height: 34px;
+    line-height: 34px;
+    color: #545454;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* ✅ 改为左对齐 */
+    gap: 8px;
+}
+
+.engine-icon {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.engine-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.engine-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.search-methods .search-item:hover {
+    background-color: #f0f0f0;
+}
+
+.input-wrap {
+    position: relative;
+    flex: 1;
+}
+.input-wrap .search-input {
+    height: 52px;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    font-size: 16px;
+}
+.search-left:focus-within{
+    border-style:solid;
+    border-color: #409EFF;
+    box-shadow: 0 0 8px rgba(64, 158, 255, 0.5);
+    }
+.input-wrap .clear-keyword {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #ccc;
+    font-size: 24px;
+    line-height: 1;
+    user-select: none;
+    transition: all 0.2s;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.input-wrap .clear-keyword:hover {
+    color: #999;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.search-submit {
+    width: 123px;
+    height: 54px;
+    line-height: 26px;
+    /* background: url("./img/search.png") #1890ff 48px center no-repeat; */
+    background-color: #1890FF;
+    /* background-image: url("./img/search.png"); 
+    background-size: 48px; */
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: 35px 35px;
+    background-size: 35px 35px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    font-family: Roboto;
+    border: 1px solid #1890ff;
+    cursor: pointer;
+    background: linear-gradient(90deg,#1890FF,#455bfb);
+}
+
+/* 搜索框 end */
+/*  导航内容 start  */
+.nav-content {
+    overflow: hidden;
+}
+/*  导航内容 end  */
+
+
+/*内容区域*/
+
+/*-----------------------------简洁版样式定义- 开始---------------------------------------------------*/
+
+.jj-list {
+    width: 33.33%;
+    float: left;
+    margin-bottom: 30px;
+    padding-right: 16px;
+}
+.jj-list:nth-of-type(3n) {
+    padding-right: 0;
+}
+.jj-list-tit {
+    font-size: 16px;
+    line-height: 25px;
+    color: rgba(49, 70, 89, 1);
+    font-weight: bold;
+}
+.jj-list-con {
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.link-group {
+    margin-bottom: 10px;
+}
+
+.link-group:last-child {
+    margin-bottom: 0;
+}
+.jj-list-con li {
+    box-sizing: border-box; /*以IE盒子模型的width为标准*/
+    padding: 1px 1px; /*设置div的内边距*/
+    width: 33.33%; /*div等分成4部分*/
+    float: left;
+    transform-origin: center top;
+}
+
+.jj-list-con li:hover {
+    /*animation: swing 2s linear 0s 1 forwards*/
+}
+@keyframes swing {
+    0%, 100% {
+        transform: perspective(200px) rotateX(0);
+    }
+    20% {
+        transform: perspective(200px) rotateX(-45deg);
+    }
+    40% {
+        transform: perspective(200px) rotateX(45deg);
+    }
+    50% {
+        transform: perspective(200px) rotateX(-25deg);
+    }
+    60% {
+        transform: perspective(200px) rotateX(25deg);
+    }
+    70% {
+        transform: perspective(200px) rotateX(-5deg);
+    }
+    80% {
+        transform: perspective(200px) rotateX(5deg);
+    }
+    90% {
+        transform: perspective(200px) rotateX(-3deg);
+    }
+    95% {
+        transform: perspective(200px) rotateX(3deg);
+    }
+}
+
+.jj-list-link {
+    display: block;
+    background: rgba(230, 247, 255, 0.96);
+    color:rgba(49, 70, 89, 1);
+    font-size: 12px;
+    text-align: center;
+    line-height: 45px;
+    transition: all 0.5s;
+    border-radius: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 5px;
+}
+.jj-list-link:hover {
+    background: #1890FF;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/*-----------------------------简洁版样式定义- 结束---------------------------------------------------*/
+
+/* ==================== 响应式布局 ==================== */
+
+/* 平板设备 (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .inner-center {
+        width: 90%;
+        max-width: 1000px;
+    }
+    
+    .jj-list {
+        width: 50%; /* 每行2个分类 */
+        padding-right: 15px;
+    }
+    
+    .jj-list:nth-of-type(3n) {
+        padding-right: 15px;
+    }
+    
+    .jj-list:nth-of-type(2n) {
+        padding-right: 0;
+    }
+}
+
+/* 手机设备 (< 768px) */
+@media screen and (max-width: 768px) {
+    .inner-center {
+        width: 95%;
+        padding: 0 10px;
+    }
+    
+    /* Logo区域 */
+    .logo-box {
+        margin-left: 0;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        overflow: visible; /* ✅ 允许logo完全显示 */
+    }
+    
+    .logo-left {
+        width: 100px; /* ✅ 缩小logo尺寸以适应小屏幕 */
+        height: auto; /* ✅ 高度自适应，保持比例 */
+    }
+    
+    .logo-left img {
+        width: 100%; /* ✅ 图片宽度填满容器 */
+        height: auto; /* ✅ 高度自适应 */
+        object-fit: contain; /* ✅ 保持图片完整显示 */
+    }
+    
+    .logo-right {
+        padding-left: 0;
+        padding-top: 10px;
+        font-size: 28px;
+    }
+    
+    /* 搜索框区域 */
+    .search-section {
+        margin-bottom: 30px;
+        display: flex; /* ✅ 确保flex布局 */
+        flex-wrap: nowrap; /* 确保搜索框不换行 */
+        width: 100%; /* ✅ 确保容器占满宽度 */
+        box-sizing: border-box; /* ✅ 包含padding和border */
+    }
+    
+    .search-left {
+        flex: 1; /* ✅ 让搜索框占据剩余空间 */
+        height: 48px; /* ✅ 明确设置高度，与按钮一致 */
+        min-width: 0; /* ✅ 允许flex子项缩小 */
+        overflow: hidden; /* ✅ 防止内容溢出 */
+    }
+    
+    .search-logo {
+        width: 50px;
+        height: 48px; /* ✅ 与search-left高度一致 */
+        flex-shrink: 0; /* 防止图标被压缩 */
+    }
+    
+    .search-logo svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .input-wrap .search-input {
+        height: 48px;
+        font-size: 14px;
+    }
+    
+    .search-submit {
+        width: 100px;
+        height: 48px; /* ✅ 与search-left高度一致 */
+        font-size: 16px;
+        flex-shrink: 0; /* 防止按钮被压缩 */
+    }
+    
+    /* 链接列表 - 每行2个链接 */
+    .jj-list {
+        width: 100%; /* 每个分类占满一行 */
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .jj-list-tit {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .jj-list-con li {
+        width: 50%; /* 每行2个链接 */
+        padding: 2px 3px;
+    }
+    
+    .jj-list-link {
+        font-size: 13px;
+        line-height: 40px;
+    }
+    
+    .jj-list-link:hover {
+        font-size: 14px;
+    }
+    
+    /* 页脚 */
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .beian_icp,
+    .beian_police {
+        font-size: 12px;
+    }
+}
+
+/* 小屏手机 (< 480px) */
+@media screen and (max-width: 480px) {
+    .logo-left {
+        width: 80px; /* ✅ 更小的logo尺寸 */
+    }
+    
+    .logo-right {
+        font-size: 24px;
+    }
+    
+    .search-section {
+        display: flex; /* ✅ 确保flex布局 */
+        width: 100%; /* ✅ 确保容器占满宽度 */
+        box-sizing: border-box; /* ✅ 包含padding和border */
+    }
+    
+    .search-left {
+        height: 44px; /* ✅ 明确设置高度 */
+        flex: 1; /* ✅ 占据剩余空间 */
+        min-width: 0; /* ✅ 允许缩小 */
+    }
+    
+    .search-logo {
+        width: 45px;
+        height: 44px; /* ✅ 与search-left高度一致 */
+    }
+    
+    .input-wrap .search-input {
+        height: 44px;
+        font-size: 13px;
+    }
+    
+    .search-submit {
+        width: 90px;
+        height: 44px; /* ✅ 与search-left高度一致 */
+        font-size: 14px;
+    }
+    
+    .jj-list-con li {
+        width: 100%; /* 超小屏幕每行1个链接 */
+    }
+}

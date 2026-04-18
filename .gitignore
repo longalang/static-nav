@@ -1,2 +1,20 @@
 .idea
 .DS_Store
+
+# Backend
+backend/venv/
+backend/env/
+backend/data/*.db
+backend/__pycache__/
+backend/**/*.pyc
+backend/.env
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/backend/static/
+
+# OS
+Thumbs.db
+
+.idea/
