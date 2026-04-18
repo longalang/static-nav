@@ -7,9 +7,13 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
+# 获取脚本所在目录（支持从任意位置执行）
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
 echo -e "${BLUE}========================================${NC}"
 echo -e "${BLUE}  开发文档导航系统 - 一键启动脚本${NC}"
 echo -e "${BLUE}========================================${NC}"
+echo -e "${BLUE}  工作目录: ${SCRIPT_DIR}${NC}"
 echo ""
 
 # 检查 Python
@@ -39,7 +43,7 @@ if [ -z "$NODE_CMD" ]; then
 fi
 
 echo -e "${YELLOW}[1/4] 检查后端依赖...${NC}"
-cd backend || exit 1
+cd "${SCRIPT_DIR}/backend" || exit 1
 
 if [ ! -d "nav" ]; then
     echo -e "  ${BLUE}创建虚拟环境...${NC}"
@@ -57,11 +61,11 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 echo -e "  ${GREEN}✅ 后端依赖检查完成${NC}"
-cd ..
+cd "${SCRIPT_DIR}"
 
 echo ""
 echo -e "${YELLOW}[2/4] 检查前端依赖...${NC}"
-cd frontend || exit 1
+cd "${SCRIPT_DIR}/frontend" || exit 1
 
 if [ ! -d "node_modules" ]; then
     echo -e "  ${BLUE}安装前端依赖（首次运行可能需要几分钟）...${NC}"
@@ -74,12 +78,13 @@ else
     echo -e "  ${BLUE}前端依赖已存在${NC}"
 fi
 echo -e "  ${GREEN}✅ 前端依赖检查完成${NC}"
-cd ..
+cd "${SCRIPT_DIR}"
 
 echo ""
 echo -e "${YELLOW}[3/4] 检查数据库...${NC}"
-if [ ! -f "backend/data/nav.db" ]; then
+if [ ! -f "${SCRIPT_DIR}/backend/data/nav.db" ]; then
     echo -e "  ${BLUE}数据库不存在，正在初始化...${NC}"
+    cd "${SCRIPT_DIR}"
     $PYTHON_CMD 数据库初始化.py
     if [ $? -ne 0 ]; then
         echo -e "${YELLOW}[警告] 数据库初始化可能有问题，但将继续启动${NC}"
@@ -116,12 +121,11 @@ echo -e "${BLUE}========================================${NC}"
 echo ""
 
 # 启动后端
-cd backend
+cd "${SCRIPT_DIR}/backend"
 # 使用虚拟环境中的 Python 直接运行，避免 source 命令兼容性问题
-source nav/bin/activate
 nav/bin/python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload &
 BACKEND_PID=$!
-cd ..
+cd "${SCRIPT_DIR}"
 
 # 等待后端启动
 sleep 3
