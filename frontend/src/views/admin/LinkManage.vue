@@ -334,7 +334,6 @@ async function toggleStatus(row) {
     filterStatus.value = null
     await loadLinks()
   } catch (error) {
-    console.error('更新状态失败:', error)
     ElMessage.error('更新状态失败')
   }
 }

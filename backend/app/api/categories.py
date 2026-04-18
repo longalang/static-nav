@@ -71,7 +71,7 @@ async def delete_existing_category(category_id: int, db: AsyncSession = Depends(
     return {"message": "删除成功"}
 
 
-@router.put("/{category_id}/status", response_model=CategoryResponse)
+@router.put("/{category_id}/status/", response_model=CategoryResponse)
 async def toggle_category_status(
     category_id: int,
     status_data: dict,

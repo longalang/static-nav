@@ -122,7 +122,7 @@ server {
 
     # 前端静态文件
     location / {
-        root /path/to/backend/static;
+        root /path/xxxx/backend/static;
         try_files $uri $uri/ /index.html;
     }
 
@@ -136,7 +136,7 @@ server {
 
     # 静态资源
     location /assets/ {
-        alias /path/to/frontend/dist/assets/;
+        alias /path/xxxx/backend/static/assets/;
         expires 1y;
         add_header Cache-Control "public, immutable";
     }
@@ -280,16 +280,6 @@ backend/data/nav.db
 
 ---
 
-## 用户数据注意事项
-
-### ⚠️ 重要提醒
-
-#### 1. 数据库备份
-```bash
-# 定期备份数据库文件
-cp backend/data/nav.db backend/data/nav.db.backup.$(date +%Y%m%d)
-```
-
 ####  管理员账号
 
 **重要**: 系统中只有一个管理员账号，用户名和密码存储在settings表中。
@@ -353,20 +343,3 @@ cp backend/data/nav.db backend/data/nav.db.backup.$(date +%Y%m%d)
 1. 数据库中是否有启用的搜索引擎
 2. 是否设置了默认搜索引擎
 3. 浏览器控制台是否有JavaScript错误
-
-
-
-### 更新日志
-
-- **v2.0.0** 
-  - ✨ 全新Vue3 + FastAPI架构
-  - ✨ 后台管理系统
-  - ✨ 响应式设计
-- **v1.0.0** (历史版本)
-  - 静态HTML导航页面
-
----
-
-## 许可证
-
-本项目采用 MIT 许可证，详见 [LICENSE](LICENSE) 文件。

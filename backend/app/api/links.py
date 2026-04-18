@@ -37,7 +37,7 @@ async def create_new_link(link_data: LinkCreate, db: AsyncSession = Depends(get_
     )
 
 
-@router.put("/{link_id}/status", response_model=LinkResponse)
+@router.put("/{link_id}/status/", response_model=LinkResponse)
 async def toggle_link_status(
     link_id: int,
     status_data: dict,

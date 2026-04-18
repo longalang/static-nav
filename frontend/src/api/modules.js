@@ -58,7 +58,7 @@ export const engineAPI = {
     return api.get('/search-engines/')
   },
   listAll() {
-    return api.get('/search-engines/all')
+    return api.get('/search-engines/')
   },
   get(id) {
     return api.get(`/search-engines/${id}`)

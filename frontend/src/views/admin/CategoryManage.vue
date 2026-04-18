@@ -206,7 +206,6 @@ async function toggleStatus(row) {
     ElMessage.success('状态更新成功')
     await loadCategories()
   } catch (error) {
-    console.error('更新状态失败:', error)
     ElMessage.error('更新状态失败')
   }
 }

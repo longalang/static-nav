@@ -17,4 +17,6 @@ frontend/backend/static/
 # OS
 Thumbs.db
 
-.idea/
+.idea/*
+.vscode/*
+backend/nav/*
